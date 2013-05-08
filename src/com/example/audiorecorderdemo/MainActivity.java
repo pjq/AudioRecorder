@@ -13,7 +13,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button startPlayback;
 	private Button stopPlayback;
 
-	private AudioRecorderAndPlaybackInterface audioRecorderAndPlaybackInterface;
+	private RecorderAndPlaybackInterface audioRecorderAndPlaybackInterface;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		startPlayback.setOnClickListener(this);
 		stopPlayback.setOnClickListener(this);
 
-		audioRecorderAndPlaybackInterface = new AudioRecorderAndPlayerbackImpl2(
+		audioRecorderAndPlaybackInterface = new RecorderAndPlayerbackMediaRecorderImpl(
 				getApplicationContext());
 	}
 

@@ -4,12 +4,13 @@ import java.io.IOException;
 
 import android.content.Context;
 import android.media.MediaRecorder;
+import android.media.MediaRecorder.OnErrorListener;
 
-public class AudioRecorderAndPlayerbackImpl2 extends
-		AudioRecorderAndPlayerbackImpl {
+public class RecorderAndPlayerbackMediaRecorderImpl extends
+		RecorderAndPlayerbackAudioRecorderImpl {
 	private MediaRecorder mediaRecorder;
 
-	public AudioRecorderAndPlayerbackImpl2(Context context) {
+	public RecorderAndPlayerbackMediaRecorderImpl(Context context) {
 		super(context);
 	}
 
@@ -19,12 +20,21 @@ public class AudioRecorderAndPlayerbackImpl2 extends
 			stopRecording();
 		}
 
+		requestAudioFocus();
+
 		mediaRecorder = new MediaRecorder();
 		mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 		mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.DEFAULT);
 		mediaRecorder.setMaxDuration(MAX_DURATION_MSEC);
 		mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.DEFAULT);
 		mediaRecorder.setOutputFile(getAudioTmpFilesPath());
+		mediaRecorder.setOnErrorListener(new OnErrorListener() {
+
+			@Override
+			public void onError(MediaRecorder mr, int what, int extra) {
+				log("what=" + what + ",extra=" + extra);
+			}
+		});
 		try {
 			mediaRecorder.prepare();
 			mediaRecorder.start();
