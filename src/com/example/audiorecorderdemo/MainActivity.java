@@ -30,7 +30,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		startPlayback.setOnClickListener(this);
 		stopPlayback.setOnClickListener(this);
 
-		audioRecorderAndPlaybackInterface = new RecorderAndPlayerbackMediaRecorderImpl(
+		audioRecorderAndPlaybackInterface = new RecorderAndPlaybackMediaRecorderImpl(
 				getApplicationContext());
 	}
 

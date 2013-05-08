@@ -1,6 +1,6 @@
 package com.example.audiorecorderdemo;
 
-import com.example.audiorecorderdemo.RecorderAndPlayerbackAudioRecorderImpl.OnAudioFocusChangeListener;
+import com.example.audiorecorderdemo.RecorderAndPlaybackAudioRecorderImpl.OnAudioFocusChangeListener;
 
 import android.content.Context;
 import android.media.AudioManager;

@@ -6,11 +6,11 @@ import android.content.Context;
 import android.media.MediaRecorder;
 import android.media.MediaRecorder.OnErrorListener;
 
-public class RecorderAndPlayerbackMediaRecorderImpl extends
-		RecorderAndPlayerbackAudioRecorderImpl {
+public class RecorderAndPlaybackMediaRecorderImpl extends
+		RecorderAndPlaybackAudioRecorderImpl {
 	private MediaRecorder mediaRecorder;
 
-	public RecorderAndPlayerbackMediaRecorderImpl(Context context) {
+	public RecorderAndPlaybackMediaRecorderImpl(Context context) {
 		super(context);
 	}
 

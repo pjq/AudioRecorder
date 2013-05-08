@@ -21,9 +21,9 @@ import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-public class RecorderAndPlayerbackAudioRecorderImpl implements
+public class RecorderAndPlaybackAudioRecorderImpl implements
 		RecorderAndPlaybackInterface {
-	private static final String TAG = RecorderAndPlayerbackAudioRecorderImpl.class
+	private static final String TAG = RecorderAndPlaybackAudioRecorderImpl.class
 			.getSimpleName();
 
 	protected static final int RECORDER_BPP = 16;
@@ -48,7 +48,7 @@ public class RecorderAndPlayerbackAudioRecorderImpl implements
 	private MediaPlayer mediaPlayer;
 	protected int playerStatus = PlayerConstants.STATUS_INVALID;
 
-	public RecorderAndPlayerbackAudioRecorderImpl(Context context) {
+	public RecorderAndPlaybackAudioRecorderImpl(Context context) {
 		this.context = context;
 		audioFile = createAudioTmpFiles();
 
