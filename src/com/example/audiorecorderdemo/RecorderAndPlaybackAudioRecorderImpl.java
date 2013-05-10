@@ -31,7 +31,7 @@ public class RecorderAndPlaybackAudioRecorderImpl implements
 	protected static final String AUDIO_RECORDER_FOLDER = "EFAudioRecorder";
 	protected static final String AUDIO_RECORDER_TEMP_FILE = "record";
 	protected static final int RECORDER_SAMPLERATE = 44100;
-	protected static final int RECORDER_CHANNELS = AudioFormat.CHANNEL_IN_STEREO;
+	protected static final int RECORDER_CHANNELS = AudioFormat.CHANNEL_IN_MONO;
 	protected static final int RECORDER_AUDIO_ENCODING = AudioFormat.ENCODING_PCM_16BIT;
 	protected static final int MAX_DURATION_MSEC = 60 * 1000;
 
@@ -243,7 +243,7 @@ public class RecorderAndPlaybackAudioRecorderImpl implements
 
 		try {
 			String path = "file://" + getAudioTmpFilesPath();
-			path = "file:///sdcard/efoffline/EFAudioRecorder/record";
+//			path = "file:///sdcard/efoffline/EFAudioRecorder/record";
 			path = "file:///sdcard/new.wav";
 			log("startPlayback,path=" + path);
 			mediaPlayer.setDataSource(context, Uri.parse(path));
