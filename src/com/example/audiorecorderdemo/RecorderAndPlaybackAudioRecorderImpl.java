@@ -243,6 +243,8 @@ public class RecorderAndPlaybackAudioRecorderImpl implements
 
 		try {
 			String path = "file://" + getAudioTmpFilesPath();
+			path = "file:///sdcard/efoffline/EFAudioRecorder/record";
+			path = "file:///sdcard/new.wav";
 			log("startPlayback,path=" + path);
 			mediaPlayer.setDataSource(context, Uri.parse(path));
 			playerStatus = PlayerConstants.STATUS_INITIALIZED;
